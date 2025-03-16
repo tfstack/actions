@@ -1,21 +1,7 @@
 name: terraform-lint-validate
 
 on:
-  push:
-    branches:
-      - "**"
-    paths:
-      - "**/*.tf"
-      - "tests/**"
-      - "examples/**"
-
-  pull_request:
-    branches:
-      - main
-    paths:
-      - "**/*.tf"
-      - "tests/**"
-      - "examples/**"
+  workflow_call:
 
 jobs:
   fmt-check:
